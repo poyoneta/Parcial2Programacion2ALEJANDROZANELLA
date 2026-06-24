@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cursos Extracurriculares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">EduTech</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#registro">Registrar Curso</a></li>
+                <li><a href="#listado">Oferta Académica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Potenciá tu Futuro Académico</h1>
+        <p>Inscribite en nuestros cursos extracurriculares y expandí tus conocimientos profesionales.</p>
+    </section>
+
+    <section class="institucional">
+        <h2>Sobre el Portal de Cursos</h2>
+        <p>Este espacio digital centraliza la oferta académica para facilitar la consulta, inscripción y actualización rápida del catálogo de cursos de nuestra institución educativa.</p>
+    </section>
+
+    <main class="container">
+        
+        <div id="mensaje-alerta" class="alerta hidden"></div>
+
+        <section id="registro" class="form-section">
+            <h2>Registrar Nuevo Curso</h2>
+            <form id="form-curso">
+                <div class="form-group">
+                    <label for="nombre">Nombre del Curso:</label>
+                    <input type="text" id="nombre" required placeholder="Ej. Introducción a Node.js">
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoría:</label>
+                    <input type="text" id="categoria" required placeholder="Ej. Tecnología, Diseño">
+                </div>
+                <div class="form-group">
+                    <label for="duracion">Duración (horas):</label>
+                    <input type="number" id="duracion" min="1" required placeholder="Ej. 32">
+                </div>
+                <div class="form-group">
+                    <label for="cupos">Cupos Disponibles:</label>
+                    <input type="number" id="cupos" min="0" required placeholder="Ej. 25">
+                </div>
+                <div class="form-group checkbox-group">
+                    <label for="activo">¿Curso Activo?</label>
+                    <input type="checkbox" id="activo" checked>
+                </div>
+                <button type="submit" class="btn-submit">Guardar Curso</button>
+            </form>
+        </section>
+
+        <section id="listado" class="list-section">
+            <h2>Oferta Académica Disponible</h2>
+            
+            <div class="filtros">
+                <button id="btn-filtro-todos" class="btn-filtro active">Todos</button>
+                <button id="btn-filtro-activos" class="btn-filtro">Solo Activos</button>
+            </div>
+
+            <div id="contenedor-tarjetas" class="grid-tarjetas">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Institución Educativa. Todos los derechos reservados. Desarrollado para Programación II.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
